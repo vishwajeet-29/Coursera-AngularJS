@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MyApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play with Interpolation and Expression</title>
+    <script src="/angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+    <div ng-controller="MyController">
+        <p>Click on anyone to see the image</p>
+
+        <!-- ng-click is used for button onclick event -->
+        <button ng-click="displayLaptop()">Laptop</button>
+        <button ng-click="displayMobile()">Mobile</button>
+        <br>
+        <!-- DOM first load the HTML elements and then angular, hence while loading HTML img tag, it does not finds "device_{{devicename}}.jpg" image, hence it always gives first error and after executing angular, browser loads image.
+        To avoid this error, we need to tell the browser that load the image after executing angular. Hence use "ng-src" instead of "src" -->
+        <!-- <img src="/images/device_{{deviceName}}.jpg" alt=""> -->
+        <img ng-src="/images/device_{{deviceName}}.jpg" width="50%" alt="">
+    </div>
+</body>
+</html>
