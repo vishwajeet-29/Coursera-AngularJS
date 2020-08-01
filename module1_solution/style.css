@@ -1,0 +1,53 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: #34495e;
+}
+
+.container
+{
+    position: absolute;
+    /* top: 50%; */
+    /* left: 50%; */
+    /* transform: translate(-50%, -50%); */
+    background-color:#191919;
+    text-align: center;
+    color: white;
+    padding: 50px;
+    width: 50%;
+}
+
+#lunchMenu
+{
+    width: 45%;
+    border:0;
+    background: none;
+    color: white;
+    margin: 30px;
+    margin-bottom: 2px;
+    text-align: center;
+    padding: 10px 10px;
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid #3498db;
+}
+
+.checkButton
+{
+    background-color: #3498db;
+    color: white;
+    margin: 10px;
+    text-align: center;
+    border: 2px solid #3498db;
+    padding: 10px 10px;
+    outline: none;
+    border-radius: 24px;
+}
+
+.showMessage
+{
+    margin : 10px;
+    font-size: 20px;
+    font-weight: bold;
+}

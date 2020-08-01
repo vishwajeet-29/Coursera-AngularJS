@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="LunchCheck">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lunch Checker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container" ng-controller="LunchCheckController">
+        <div class="inputBox">
+            <input id="lunchMenu" type="text" placeholder="list of comma seperated dishes you usually eat for lunch" ng-model="list">
+            <br>
+            <span style="color: rgb(201, 195, 195); font-size: 12px;">We do NOT consider an empty item, i.e., ,or ,, as an item</span>
+        </div>
+        <div>
+            <br>
+            <button class="checkButton" ng-click="printMessage()">Check If Too Much</button>
+        </div>
+        <div class="showMessage">
+            <span ng-style="myStyle">{{message}}</span>
+        </div>
+    </div>
+
+
+    <script src="/angular.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
