@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="CurrencyApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body ng-controller="CurrencyController">
+
+    <div>
+        <!-- {{msg}} -->
+         <!-- below is the way of using filter in HTML -->
+        {{msg | uppercase}} 
+    </div>
+    <div>
+        <!-- {{currency_expression}} -->
+        <!-- below is the way of using currency filter in HTML -->
+        {{currency_expression | currency : "Rs." : 4}}
+    </div>
+
+    <script src="/angular.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
+<!-- whenever we are using filters on expression in HTML, use pipe '|' to seperate expression and filter -->
