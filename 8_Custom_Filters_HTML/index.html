@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="CustomFilterApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body ng-controller="CustomFilterController">
+    <h1>Use of user defined filters in HTML file</h1>
+    <div>
+        {{ likesMessage() }}
+    </div>
+    <div>
+        <!-- chaining and using user defined filters in HTML  -->
+        {{ lovesMessage() | custom : "likes" : "loves" | uppercase  }}
+    </div>
+    <script src="/angular.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
