@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="BindingTypesApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Types of Bindings</title>
+</head>
+<body ng-controller="BindingController">
+    <div>
+        <!-- one watcher will be created for this -->
+        <!-- watcher_1 -->
+        FirstName (<b>2-way Binding</b>) : <input type="text" ng-model="firstName">
+    </div>
+    <div>
+        <!-- one watcher will be created for this -->
+        <!-- watcher_2 -->
+        FullName (<b>1-Way Binding</b>) : {{ fullName }} 
+    </div>
+    <div>
+        <!-- one watcher will be created for this -->
+        <!-- watcher_3 -->
+        FullName (<b>1-Time Binding</b>) : {{ ::fullName }}
+    </div>
+    <div>
+        <!-- one watcher will be created for this -->
+        <!-- watcher_4 -->
+        No. Of Wachers = {{ noOfWatchers }}
+    </div>
+    <div>
+        <!-- watcher will not created for these buttons -->
+        <button ng-click="setFullName()">set FullName</button>
+        <button ng-click="logFirstName()">show first name</button>
+        <button ng-click="logFullName()">show full name</button>
+        <button ng-click="getWatchersCount()">show Watcher Count</button>
+    </div>
+    <script src="/angular.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
