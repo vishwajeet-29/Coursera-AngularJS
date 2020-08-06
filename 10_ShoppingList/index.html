@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ShoppingApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping List</title>
+</head>
+<body ng-controller="ShoppingController">
+    <div>
+        <!-- display only list of items -->
+        <h2>List of items</h2>
+        <ul>
+            <li ng-repeat="item in shoppingList1">{{ item }}</li>
+        </ul>
+    </div>
+    <div>
+        <!-- display list of items with quantity -->
+        <h2>List of items with quantity</h2>
+        <ul>
+            <li ng-repeat="item in shoppingList2">{{ $index+1 }}. Buy {{ item.quantity }} of {{ item.name }} </li>
+        </ul>
+    </div>
+    <div>
+        <!-- to add new item in the list -->
+        <input type="text" ng-model="newItemName" placeholder="Enter new item">
+        <input type="text" ng-model="itemQuantity" placeholder="Enter quantity">
+        <button ng-click="addItem()">Add Item</button>
+    </div>
+    <div>
+        <!-- to change quantity of already existing item -->
+        <input type="text" ng-model="itemName" placeholder="Enter existing item">
+        <input type="text" ng-model="newItemQuantity" placeholder="Enter new Quantity">
+        <button ng-click="changeQuantity()">Click to change quantity</button>
+    </div>
+    <script src="/angular.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
