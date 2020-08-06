@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ShoppingApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+</head>
+<body ng-controller="ShoppingController">
+    <h1>Shopping Cart</h1>
+    <div>
+        <!-- searchValue is the name of item which is searched in shopping list letter by letter -->
+        <input type="text" ng-model="searchString">
+    </div>
+    <div>
+        <ul>
+            <!-- here filter is the inbuilt filter(a special function of array) which filters out all the items containing searchValue -->
+            <li ng-repeat = "item in shoppingList1  | filter : searchString"    > {{ item }} </li>
+        </ul>
+    </div>
+    <script src="/angular.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
