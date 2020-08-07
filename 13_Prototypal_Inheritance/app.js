@@ -60,6 +60,6 @@ console.log(dog);
 console.log(new Animal("Lion"));
 
 //In below syntax, new keyword is not used, but it must needs to call a constructor function
-//As the function name is starts with a UpperCase letter and new keyword is not used then it will search for Animal function in the parent object i.e. "Window" and not the above defined function 
+//As the function name is starts with a UpperCase letter and new keyword is not used then it will search for Animal function in the global scope i.e. "Window" and not the above defined function 
 Animal("Lion");
 
