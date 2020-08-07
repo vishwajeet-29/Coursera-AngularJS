@@ -29,7 +29,7 @@ child.value = "childValue";
 console.log("parent.obj === child.obj => ", parent.value === child.value);
 //In case of primitive properties, changing value in child will not reflect in parent
 //In case of objects, thinks behave differently
-changing the object value using child, it also changes the object value of parent
+// changing the object value using child, it also changes the object value of parent
 // child.obj = { objValue : "ChildObjectValue"}; // this will not change the parent object value as here we are creating seperate obj var for child i.e. different memory location
 child.obj.objValue = "childObjectValue";  //this will change the parent object value to "childValue", same memory loaction
 
