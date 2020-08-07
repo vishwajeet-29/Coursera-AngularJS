@@ -63,3 +63,11 @@ console.log(new Animal("Lion"));
 //As the function name is starts with a UpperCase letter and new keyword is not used then it will search for Animal function in the global scope i.e. "Window" and not the above defined function 
 Animal("Lion");
 
+child.getMessage = function(){
+    this.message  = "xyz--------------";
+    return this.message;
+};
+
+var coverup = child.getMessage();   //calling a function will create "message property for the child"
+
+console.log(child.message);     //if getMessage() function is not called then the message property for the child will not be created and hence the parent message property will be called
