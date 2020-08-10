@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ShoppingListApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping List</title>
+</head>
+<body>
+    <div ng-controller="ShoppingListAddController as itemAdder">
+        <input type="text" ng-model="itemAdder.itemName" placeholder="Item Name">
+        <input type="text" ng-model="itemAdder.itemQuantity" placeholder="Item Quantity">
+        <button ng-click="itemAdder.addItem()"> Add Item to Shopping List</button>
+    </div>
+    <!-- treating controllers as a function constructor and hence accessing properties like controllerName.propertyName -->
+    <div ng-controller="ShoppingListShowController as showList">
+        <ol>
+            <li ng-repeat="item in showList.items">
+                <p>{{item.quantity}} of {{item.name}} <button ng-click="showList.removeItem($index)">Remove Item</button></p>
+                <!-- $index is used to pass the index of the item that we want to remove -->
+            </li>
+        </ol>
+    </div>
+    <script src="/angular.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
