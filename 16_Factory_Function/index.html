@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ShoppingApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+</head>
+<body>
+    <div ng-controller="ShoppingList1Controller as list1">
+        <input type="text" ng-model="list1.itemName">
+        <input type="text" ng-model="list1.itemQuantity">
+        <button ng-click="list1.addToCart()">Add to cart</button>
+        <ul>
+            <li ng-repeat="item in list1.items">{{ $index+1 }}. {{ item.quantity }} of {{ item.name }}
+                <button ng-click="list1.removeItem($index)">remove</button>
+            </li>
+        </ul>
+    </div>
+    <div ng-controller="ShoppingList2Controller as list2">
+        <input type="text" ng-model="list2.itemName">
+        <input type="text" ng-model="list2.itemQuantity">
+        <button ng-click="list2.addToCart()">Add to cart</button>
+        <ul>
+            <li ng-repeat="item in list2.items">{{ $index+1 }}. {{ item.quantity }} of {{ item.name }}
+                <button ng-click="list2.removeItem($index)">Remove</button>
+            </li>
+        </ul>
+    </div>
+    <script src="/angular.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
